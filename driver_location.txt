@@ -1,0 +1,1 @@
+chrome_driver = webdriver.Chrome(executable_path="C:/Users/DESKTOP/Desktop/Compiler/Pythonfiles/chromedriver_win32/chromedriver.exe")
