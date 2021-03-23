@@ -17,4 +17,4 @@ chrome_driver.minimize_window()# * minimizes window
 print(chrome_driver.title, chrome_driver.current_url)
 chrome_driver.refresh() #* the refresh button to refresh the browser
 
-chrome_driver.quit() # * all window will close
+chrome_driver.quit() #* all window will close
