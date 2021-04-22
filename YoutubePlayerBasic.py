@@ -18,10 +18,11 @@ def player(chrome_path, query_string):
     chrome_driver.get('https://www.youtube.com/')
     chrome_driver.find_element_by_id("search").send_keys(query_string) #* your search goes here
     
-    # below is the code for getting the element and clicking them one by one.
+    #* below is the code for getting the element and clicking them one by one.
     chrome_driver.find_element_by_id('search-icon-legacy').click()
-    chrome_driver.find_element_by_tag_name('ytd-video-renderer').click()
-    sleep(10)
+    chrome_driver.find_elements_by_id("content")[0].click() #* clicks the first video link
+    sleep(10) #* sleep for 10 seconds for youtube skip add button to show up could also use implicitly_wait or explicitly
+    #TODO: need to learn about implicit wait so that it waits for the css tag to appear then proceeds further
     try:
         chrome_driver.find_element_by_css_selector('.ytp-ad-skip-button').click()
     except Exception as e:
