@@ -29,6 +29,7 @@ def player(chrome_path, query_string):
         print('no skipable or some error; \n', e)
 
 if __name__ == '__main__':
-    chrome_path = input("Enter the web Driver path: ") 
+    #chrome_path = input("Enter the web Driver path: ")
+    chrome_path = "C:\\Users\\DESKTOP\\Desktop\\Compiler\\Pythonfiles\\chromedriver_win32\\chromedriver.exe"
     query_string = input("Enter the query string you want to search: ")
     player(chrome_path, query_string)
